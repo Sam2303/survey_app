@@ -1,0 +1,30 @@
+.viewContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  a {
+    text-align: center;
+    width: 15%;
+    color: $secondaryColor;
+    font-size: 140%;
+    text-decoration: none;
+    margin: 5vh;
+    padding: 3vh;
+    background: $primaryColor;
+    border-radius: 30px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .viewContainer {
+    flex-direction: column;
+    a {
+      width: 80%;
+      font-size: 120%;
+      margin: 1vh;
+      padding: 2vh;
+    }
+  }
+}

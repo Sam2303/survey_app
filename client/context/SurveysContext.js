@@ -40,6 +40,7 @@ const SurveysProvider = ({ children }) => {
         body: JSON.stringify(updatedTodo),
         headers: { "content-type": "application/json" },
       });
+
       setSurveys((prevSurveys) => {
         const existingSurveys = [...prevSurveys];
         const existingSurvey = existingSurveys.find(
@@ -53,6 +54,21 @@ const SurveysProvider = ({ children }) => {
     }
   };
 
+  const getSingleSurvey = async (id) => {
+    console.log(id);
+    try {
+      const res = await fetch("/api/getSingleSurvey", {
+        method: "GET",
+        body: JSON.stringify(id),
+        headers: { "content-type": "application/json" },
+      })
+      let response = res.json();
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <SurveysContext.Provider
       value={{
@@ -61,6 +77,7 @@ const SurveysProvider = ({ children }) => {
         refreshSurveys,
         updateSurvey,
         addSurvey,
+        getSingleSurvey,
       }}
     >
       {children}
