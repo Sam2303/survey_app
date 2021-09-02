@@ -12,3 +12,14 @@
       text-decoration: none;
   }
 }
+
+@media(max-width: 1000px){
+  .navContainer{
+    width: 100%;
+    padding: 1vh 0;
+    flex-direction: column;
+    h1, a{
+      margin-bottom:1vh;
+    }
+  }
+}

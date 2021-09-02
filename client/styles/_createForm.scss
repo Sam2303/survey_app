@@ -1,0 +1,68 @@
+.createForm {
+  grid-area: "form";
+}
+.submitedQuestions {
+  grid-area: "questions";
+}
+.createContainer {
+  width: 80%;
+  margin: 7vh 10%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  }
+  .createForm{
+    width: 60%;
+    margin-right: 5%;
+  }
+.showcaseSurvey{
+  width: 30%;
+  p{
+    margin: 2vh;
+  }
+}
+  .createForm, .showcaseSurvey {
+    
+    input,
+    button {
+      margin: 3%;
+    }
+    p {
+      font-size: 180%;
+      margin-bottom: -1vh;
+    }
+    .text {
+      width: 70%;
+      height: 5vh;
+      font-size: 140%;
+      border-radius: 10px;
+    }
+    label {
+      font-size: 140%;
+    }
+    button {
+      width: 30%;
+      height: 13%;
+      border-radius: 15px;
+      border: none;
+      background: $primaryColor;
+      color: $secondaryColor;
+      font-size: 140%;
+    }
+  }
+
+
+@media (max-width: 1200px) {
+  .createContainer {
+    flex-direction: column;
+    .createForm {
+      .text {
+        width: 100%;
+      }
+      button {
+        width: 80%;
+        height: 7vh;
+      }
+    }
+  }
+}

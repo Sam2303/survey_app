@@ -17,9 +17,9 @@ export default function Home() {
       <div className="mainView">
         <h3 className="welcomeMsg">{words.welcomeMsg}</h3>
         <div className="bigLinks">
-          <Link href="./take">Take a Survey</Link>
-          <Link href="./create">Create a Survey</Link>
-          <Link href="./view">View your Surveys</Link>
+          <Link href="/take">Take a Survey</Link>
+          <Link href="/create">Create a Survey</Link>
+          <Link href="/view">View your Surveys</Link>
         </div>
       </div>
     </div>
