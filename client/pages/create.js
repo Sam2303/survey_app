@@ -23,7 +23,11 @@ export default function Create() {
       questions: showcaseSurvey.Questions,
     };
     console.log(JSON.stringify(Questions));
-    addSurvey(Title, Secret, Password, JSON.stringify(Questions), "");
+    if (Secret === true && Password == "") {
+      alert("You need a password");
+    } else {
+      addSurvey(Title, Secret, Password, JSON.stringify(Questions), "");
+    }
   };
 
   const addNewQuestion = () => {
