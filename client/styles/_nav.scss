@@ -1,0 +1,14 @@
+.navContainer {
+  background: $primaryColor;
+  color: $secondaryColor;
+  padding: 2vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 120%;
+  h1, a{
+      margin-left: 2vh;
+      color: $secondaryColor;
+      text-decoration: none;
+  }
+}
