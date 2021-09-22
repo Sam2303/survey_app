@@ -1,0 +1,15 @@
+.singleSurveyContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 5%;
+  width: 90%;
+  text-align: center;
+  .survey {
+    width: 40%;
+  }
+  .responses {
+    width: 60%;
+  }
+}

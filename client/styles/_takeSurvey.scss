@@ -1,0 +1,32 @@
+.survey {
+  display: flex;
+  flex-direction: column;
+  margin: 3vh;
+  text-align: center;
+
+  h2 {
+    font-size: 200%;
+    margin-bottom: 3vh;
+  }
+  p {
+    font-size: 130%;
+    margin: 1vh;
+  }
+  input {
+    width: 30%;
+    height: 4vh;
+    font-size: 130%;
+    border-radius: 15px;
+  }
+  button {
+    margin: 5vh 45%;
+    width: 10%;
+    height: 5vh;
+    border-radius: 15px;
+    border: none;
+    background: $primaryColor;
+    color: $secondaryColor;
+    font-size: 150%;
+    cursor: pointer;
+  }
+}

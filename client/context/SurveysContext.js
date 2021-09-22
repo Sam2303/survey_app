@@ -37,16 +37,12 @@ const SurveysProvider = ({ children }) => {
     try {
       const res = await fetch("/api/UpdateSurvey", {
         method: "PUT",
-        body: JSON.stringify(updatedTodo),
+        body: JSON.stringify(updatedSurvey),
         headers: { "content-type": "application/json" },
       });
 
       setSurveys((prevSurveys) => {
-        const existingSurveys = [...prevSurveys];
-        const existingSurvey = existingSurveys.find(
-            (survey) => survey.id === updatedSurvey.id
-        );
-        existingSurvey.fields = updatedSurvey.fields;
+        const existingSurveys = prevSurveys;
         return existingSurveys;
     });
     } catch (err) {

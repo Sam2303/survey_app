@@ -11,6 +11,8 @@ const viewSingleSurvey = (initialSurveys) => {
   const survey = initialSurveys.initialSurveys.filter((x) => x.id === id)[0];
   console.log(survey.fields);
   const questions = JSON.parse(survey.fields.Questions).questions;
+  const responses = JSON.parse(survey.fields.Responses).responses;
+
   return (
     <div>
       <Nav />
@@ -25,12 +27,16 @@ const viewSingleSurvey = (initialSurveys) => {
             );
           })}
         </div>
-      </div>
-      <div className="responses">
-          repsonses
+        <div className="responses">
+          <h2>Responses</h2>
+          {responses.map((response) => {
+            console.log(response)
+          })
+          }
+        </div>
       </div>
     </div>
-  );
+  )
 };
 
 export async function getServerSideProps(context) {
