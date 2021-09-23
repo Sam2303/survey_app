@@ -30,13 +30,19 @@ const viewSingleSurvey = (initialSurveys) => {
         <div className="responses">
           <h2>Responses</h2>
           {responses.map((response) => {
-            console.log(response)
-          })
-          }
+            return (
+              <div className="indvResponse">
+                {response.response.map((val) => {
+                  console.log(val);
+                  return <p>{val}</p>;
+                })}
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export async function getServerSideProps(context) {

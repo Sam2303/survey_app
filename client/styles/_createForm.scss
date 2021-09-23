@@ -10,53 +10,56 @@
   text-align: center;
   display: flex;
   flex-direction: row;
-  }
-  .createForm{
-    width: 60%;
-    margin-right: 5%;
-  }
-.showcaseSurvey{
+}
+.createForm {
+  width: 60%;
+  margin-right: 5%;
+}
+.showcaseSurvey {
   text-align: left;
   width: 30%;
-  p{
+  p {
     margin: 2vh;
   }
 }
-  .createForm, .showcaseSurvey {
-
-    input,
-    button {
-      margin: 3%;
-    }
-    p {
-      font-size: 180%;
-      margin-bottom: -1vh;
-    }
-    .text {
-      width: 70%;
-      height: 5vh;
-      font-size: 140%;
-      border-radius: 10px;
-    }
-    label {
-      font-size: 140%;
-    }
-    button {
-      width: 30%;
-      height: 13%;
-      border-radius: 15px;
-      border: none;
-      background: $primaryColor;
-      color: $secondaryColor;
-      font-size: 140%;
-    }
+.createForm,
+.showcaseSurvey {
+  input,
+  button {
+    margin: 3% 0;
   }
-
+  p {
+    font-size: 180%;
+    margin-bottom: -1vh;
+  }
+  .text {
+    width: 70%;
+    height: 5vh;
+    font-size: 140%;
+    border-radius: 10px;
+  }
+  label {
+    font-size: 140%;
+  }
+  button {
+    width: 30%;
+    height: 13%;
+    border-radius: 15px;
+    border: none;
+    background: $primaryColor;
+    color: $secondaryColor;
+    font-size: 140%;
+  }
+}
 
 @media (max-width: 1200px) {
   .createContainer {
     flex-direction: column;
+    width: 100%;
+    margin: 0;
     .createForm {
+      margin: 0;
+      width: 100%;
       .text {
         width: 100%;
       }
@@ -64,6 +67,13 @@
         width: 80%;
         height: 7vh;
       }
+    }
+  }
+  .showcaseSurvey {
+    margin: 0;
+    width: 100%;
+    p {
+      font-size: 140%;
     }
   }
 }

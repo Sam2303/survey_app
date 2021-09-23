@@ -11,5 +11,23 @@
   }
   .responses {
     width: 60%;
+    .indvResponse{
+      margin: 10vh;
+    }
+  }
+}
+@media(max-width: 1000px){
+  .singleSurveyContainer {
+    flex-direction: column;
+    .survey {
+      width: 90%;
+    }
+    .responses {
+      .indvResponse{
+        margin: 2vh 0;
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+    }
   }
 }

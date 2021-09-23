@@ -10,6 +10,7 @@ export default function Create() {
     Secret: false,
     Password: "",
     Questions: [],
+    Responses: []
   });
 
   const addNewSurvey = () => {
@@ -22,11 +23,14 @@ export default function Create() {
     const Questions = {
       questions: showcaseSurvey.Questions,
     };
+    const Responses ={
+      responses: []
+    }
     console.log(JSON.stringify(Questions));
     if (Secret === true && Password == "") {
       alert("You need a password");
     } else {
-      addSurvey(Title, Secret, Password, JSON.stringify(Questions), "");
+      addSurvey(Title, Secret, Password, JSON.stringify(Questions), JSON.stringify(Responses));
     }
   };
 
